@@ -20,16 +20,16 @@ export default function AllMoviesPage(props)
   const[selectedMovie,setSelectedMovie] = useState(null);
   const movies=[];
 
-  useEffect(() => {
+  useEffect(() => {  // Here we will check if this is the users first time and if so will create a cookie for him to save his favorite movies
     !cookies?.myFavorites && setCookie('myFavorites',[],{ path: '/' });
     setIsLoading(true);
-    axios.get('https://swapi.dev/api/films/')
+    axios.get('https://swapi.dev/api/films/') // geting the movies from the api
     .then(response => {
         setAllMovies(response.data.results);
-        setIsLoading(false);
+        setIsLoading(false); // we got the movies no need for loading
     });
   },[]);
-
+   // in this function we will handle the button of moving a movie to favorite and removing it
   const toggleFavoriteStatusHandler = (movieID) => {
     if(!cookies.myFavorites.includes(movieID)){
         setCookie('myFavorites',cookies.myFavorites.concat(movieID),{ path: '/' });
@@ -42,7 +42,7 @@ export default function AllMoviesPage(props)
         setCookie('myFavorites',cookies.myFavorites.filter(movie => movie !== movieID),{ path: '/' });
     };
   
-  const isFavorite = (movieID) => {
+  const isFavorite = (movieID) => { //check if the given movie is a favorite
     return (cookies.myFavorites.includes(movieID));
   };
 
