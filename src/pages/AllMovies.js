@@ -56,7 +56,7 @@ export default function AllMoviesPage(props)
           <ul> {allMovies.map((movie, index)=> (
                <li key={movie.episode_id}>
                       <div>
-                         <a onClick={() => setSelectedMovie(movie)}><FontAwesomeIcon color={cookies?.myFavorites.includes(movie.episode_id) ? '#77002e' : 'grey'} icon={faStar} />
+                         <a onClick={() => setSelectedMovie(movie)}><FontAwesomeIcon color={cookies?.myFavorites.includes(movie.episode_id) ? '#77002e' : 'grey'} icon={faStar} /> //create and set the icon star pink if it is a favorite and gray elsewise 
                           <Card ><h3>{movie.title}</h3>
                           <div className={classes.image}>
                             <img src ={GetImage(movie.episode_id)} alt ={movie.title}/>
