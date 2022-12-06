@@ -5,7 +5,6 @@ import {useCookies} from 'react-cookie';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {IsEmpty} from 'react-lodash'
 import MovieItemList from "../components/movies/MovieItemList";
-//import classes from '../components/movies/MovieItem.module.css';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Card from "../components/ui/Card";
 import GetImage from "../components/layout/Image";
