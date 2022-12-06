@@ -1,0 +1,49 @@
+.splitScreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    
+}
+.topPane{
+    width:  100% ;
+    align-items: flex-start;
+    left: -10px;
+}
+.bottomPane {
+    width: 100% ;
+    align-items: flex-end;
+}
+.actions {
+    padding: 1.5rem;
+    text-align: center;
+  }
+.actions button {
+    font: inherit;
+    cursor: pointer;
+    color: white;
+    border: 1px solid #77002e;
+    background-color: #77002e;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;}
+.actions button:hover,
+.actions button:active {
+    background-color: #ffe2ed;
+    }
+.image {
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    }
+.image img {
+    width: 100%;
+    object-fit: cover;
+    }
+.main 
+{
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 40rem;
+    }
